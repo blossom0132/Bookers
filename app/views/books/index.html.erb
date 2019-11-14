@@ -1,6 +1,6 @@
  <h1>Books</h1>
 
-<table  border="1">
+<table>
   <tr>
     <th>Title</th><th>Body</th><th> </th><th> </th><th> </th>
   </tr>
@@ -20,7 +20,7 @@
 
 <h2>New book</h2>
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーがあります
+  <%= @book.errors.count %>件のエラーがあります。<br>
   <% @book.errors.full_messages.each do|message| %>
       <%= message %>
     <% end %>
