@@ -20,15 +20,12 @@
 
 <h2>New book</h2>
 <% if @book.errors.any? %>
-  <%= @book.erros.count %>件のエラーがあります
-  <% @book.erros.full_messages.each do|message| %>
+  <%= @book.errors.count %>件のエラーがあります
+  <% @book.errors.full_messages.each do|message| %>
       <%= message %>
     <% end %>
 <% end %>
 
-<% if @book.errors.any? %>
-   <p>Title and Body are must be filled.</p>
-<% end %>
 
 <%= form_for(@book, url: '/books') do |f| %>
 
